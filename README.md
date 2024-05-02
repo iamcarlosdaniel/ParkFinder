@@ -53,24 +53,44 @@ Furthermore, by reducing the need for constructing new parking facilities, it co
 
 #### Quick Start
 
-Learn how to use our Back End, please read the [MAGEO Quick Start](), which includes API usage examples.
+Learn how to use our BackEnd, please read the [ParkFinder Quick Start](), which includes API usage examples.
 
 #### Example
 
-A complete example showing the implementation in a custom FrontEnd is located in the project's [public]() folder of the repository.
+A complete example showcasing the implementation on a frontend for users on mobile devices and web, as well as for platform administrators, can be found in the following repositories:
+
+- [Mobile Users Example (Offerors and Applicants)]()
+- [Web Users Example (Administrators)]()
 
 ## Documentation
 
 Consult the documentation and API descriptions for proper usage.
 
-All documentation is available in the [docs]() folder of the repository.
+All the documentation is available in the `/docs` folder, and you can view the index in the [index.md](docs/index.md) file inside that folder in our repository.
 
-## Contributing
+## Development Team
 
-MAGEO would not be possible without you all. We appreciate your help!
+ParkFinder would not be possible without you all. We appreciate your help!
 
-- Autor: Carlos Daniel Menchaca Arauz (@iamcarlosdaniel)
-- Colaborador: Bruna Antelo Prado (@user-github)
+#### FrontEnd - Web
+
+📁[Repositorio en GitHub]()
+
+- Bruna Antelo Prado [@usergithub]()
+- Luis Enrique Padilla Arandia [@usergithub]()
+
+#### FrontEnd - Movil
+
+📁[Repositorio en GitHub]()
+
+- Telassim Tammy Valentina Lazaro Quispe [@usergithub]()
+- Jose Maria Zapata Paz [@usergithub]()
+
+#### BackEnd
+
+📁[Repositorio en GitHub]()
+
+- Carlos Daniel Menchaca Arauz - [@iamcarlosdaniel]()
 
 ## License
 

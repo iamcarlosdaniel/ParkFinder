@@ -1,0 +1,29 @@
+{
+  "name": "parkfinder",
+  "version": "1.0.0",
+  "description": "The ParkFinder addresses the challenge of parking access in urban areas with high population density, as is the case in many cities worldwide. This project aims to optimize the use of private parking spaces that are not permanently in use in residential properties, offering a solution for both the owners of these spaces and users in search of temporary parking.",
+  "main": "index.js",
+  "type": "module",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "nodemon server/index.js"
+  },
+  "author": "Carlos Daniel Menchaca Arauz",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.3.3",
+    "morgan": "^1.10.0",
+    "zod": "^3.23.5"
+  }
+}
