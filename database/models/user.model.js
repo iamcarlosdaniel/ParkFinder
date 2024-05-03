@@ -48,7 +48,6 @@ const userSchema = new mongoose.Schema(
       type: Number,
       required: true,
       trim: true,
-      unique: true,
     },
     country: {
       type: String,

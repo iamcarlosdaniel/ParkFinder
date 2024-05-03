@@ -15,6 +15,7 @@ const register = async (req, res) => {
       status: "OK",
       data: {
         message: "Congratulations! Your account has been successfully created.",
+        token: token,
       },
     });
   } catch (error) {
@@ -38,7 +39,7 @@ const login = async (req, res) => {
 
     res.status(200).send({
       status: "OK",
-      data: { message: "Login successful. Welcome back!" },
+      data: { message: "Login successful. Welcome back!", token: token },
     });
   } catch (error) {
     res

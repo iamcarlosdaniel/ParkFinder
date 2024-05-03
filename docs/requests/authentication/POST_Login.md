@@ -4,7 +4,7 @@ Este documento proporciona instrucciones sobre cómo autenticarse en la API para
 
 ## Endpoint
 
-- **URL**: `/api/login`
+- **URL**: `/api/v1/login`
 - **Método**: `POST`
 - **Descripcion**: Permite el logueo de los usuarios
 

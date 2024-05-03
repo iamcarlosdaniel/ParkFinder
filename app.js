@@ -4,6 +4,8 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 
 import v1AuthenticationRoutes from "./v1/routes/authentication.routes.js";
+import v1UserRoutes from "./v1/routes/user.routes.js";
+import v1CarRoutes from "./v1/routes/car.routes.js";
 
 const app = express();
 
@@ -22,6 +24,8 @@ app.use(cookieParser());
 
 //API Versioning
 app.use("/api/v1", v1AuthenticationRoutes);
+app.use("/api/v1", v1UserRoutes);
+app.use("/api/v1", v1CarRoutes);
 
 //Hello World!
 app.get("/helloworld", (req, res) => {

@@ -9,20 +9,24 @@ import {
 
 const router = Router();
 
+//Register new user
 router.post(
   "/register",
   validateSchema(registerSchema),
   authenticationController.register
 );
 
+//Login a user
 router.post(
   "/login",
   validateSchema(loginSchema),
   authenticationController.login
 );
 
+//Logout user
 router.post("/logout", authenticationController.logout);
 
+//View authentication status
 router.get(
   "/auth/status",
   authenticationRequired,
