@@ -5,11 +5,15 @@ const register = async (req, res) => {
     const userData = req.body;
     const { user, token } = await authenticationService.register(userData);
 
+    //Set cookie
     res.cookie("token", token, {
       sameSite: "none",
       secure: true,
       httpOnly: false,
     });
+
+    //Set Header
+    res.setHeader("Authorization", `Bearer ${token}`);
 
     res.status(200).send({
       status: "OK",
@@ -31,11 +35,15 @@ const login = async (req, res) => {
 
     const { user, token } = await authenticationService.login(email, password);
 
+    //Set cookie
     res.cookie("token", token, {
       sameSite: "none",
       secure: true,
       httpOnly: false,
     });
+
+    //Set Header
+    res.setHeader("Authorization", `Bearer ${token}`);
 
     res.status(200).send({
       status: "OK",

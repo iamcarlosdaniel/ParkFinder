@@ -24,7 +24,7 @@ const getOneCar = async (req, res) => {
 
 const createCar = async (req, res) => {
   try {
-    const newCar = await carService.createCar(req.body);
+    const newCar = await carService.createCar(req.body, req.user.id);
     res.status(200).send({ status: "OK", data: newCar });
   } catch (error) {
     res

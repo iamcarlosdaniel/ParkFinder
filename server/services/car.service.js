@@ -23,9 +23,12 @@ const getOneCar = async (carId) => {
   }
 };
 
-const createCar = async (carData) => {
+const createCar = async (carData, userId) => {
   try {
-    const newCar = new Car(carData);
+    const newCar = new Car({
+      user_id: userId,
+      ...carData,
+    });
     newCar.save();
     return newCar;
   } catch (error) {
