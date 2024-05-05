@@ -5,7 +5,7 @@ import { authenticationRequired } from "../../middlewares/authentication.middlew
 const router = Router();
 
 router.get(
-  "/auth/users/:id",
+  "/auth/users/:id([0-9a-fA-F]{24})",
   authenticationRequired,
   userController.getOneUser
 );

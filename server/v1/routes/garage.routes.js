@@ -20,7 +20,7 @@ router.get(
 
 //See a garage
 router.get(
-  "/auth/users/garages/:id",
+  "/auth/users/garages/:id([0-9a-fA-F]{24})",
   authenticationRequired,
   garageController.getOneGarage
 );
@@ -34,14 +34,14 @@ router.post(
 
 //Update a garage
 router.put(
-  "/auth/users/garages/:id",
+  "/auth/users/garages/:id([0-9a-fA-F]{24})",
   authenticationRequired,
   garageController.updateGarage
 );
 
 //Delete a garage
 router.delete(
-  "auth/users/garage/:id",
+  "auth/users/garage/:id([0-9a-fA-F]{24})",
   authenticationRequired,
   garageController.deleteGarage
 );

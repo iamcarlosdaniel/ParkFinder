@@ -16,7 +16,7 @@ router.get(
 
 //See a car
 router.get(
-  "/auth/users/cars/:id",
+  "/auth/users/cars/:id([0-9a-fA-F]{24})",
   authenticationRequired,
   carController.getOneCar
 );
@@ -30,14 +30,14 @@ router.post(
 
 //Update a car
 router.put(
-  "/auth/users/cars/:id",
+  "/auth/users/cars/:id([0-9a-fA-F]{24})",
   authenticationRequired,
   carController.updateCar
 );
 
 //Delete a car
 router.delete(
-  "/auth/cars/:id",
+  "/auth/cars/:id([0-9a-fA-F]{24})",
   authenticationRequired,
   carController.deleteCar
 );

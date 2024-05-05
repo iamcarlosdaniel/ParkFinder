@@ -11,7 +11,7 @@ const getAllCars = async () => {
 
 const getAllMyCars = async (userId) => {
   try {
-    const allMyCars = await Car.find({ user: userId }).populate("user");
+    const allMyCars = await Car.find({ user_id: userId }).populate("user_id");
     return allMyCars;
   } catch (error) {
     throw new Error(error.message);

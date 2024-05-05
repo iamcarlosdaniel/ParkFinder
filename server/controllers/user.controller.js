@@ -2,7 +2,7 @@ import { userService } from "../services/user.service.js";
 
 const getOneUser = async (req, res) => {
   try {
-    const userFound = await userService.getUser(req.user.id);
+    const userFound = await userService.getOneUser(req.params.id);
     res.status(200).send({ status: "OK", data: userFound });
   } catch (error) {
     res
@@ -13,7 +13,7 @@ const getOneUser = async (req, res) => {
 
 const getMyUser = async (req, res) => {
   try {
-    const userFound = await userService.getUser(req.user.id);
+    const userFound = await userService.getMyUser(req.user.id);
     res.status(200).send({ status: "OK", data: userFound });
   } catch (error) {
     res
@@ -24,7 +24,7 @@ const getMyUser = async (req, res) => {
 
 const updateMyUser = async (req, res) => {
   try {
-    const updatedUser = await userService.updateUser(req.user.id, req.body);
+    const updatedUser = await userService.updateMyUser(req.user.id, req.body);
     res.status(200).send({ status: "OK", data: updatedUser });
   } catch (error) {
     res
