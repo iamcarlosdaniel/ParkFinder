@@ -2,6 +2,8 @@ import Garage from "../database/models/garage.model.js";
 
 const getAllGarages = async () => {
   try {
+    const allGarages = Garage.find();
+    return allGarages;
   } catch (error) {
     throw new Error(error.message);
   }

@@ -6,7 +6,10 @@ import cors from "cors";
 import v1AuthenticationRoutes from "./v1/routes/authentication.routes.js";
 import v1UserRoutes from "./v1/routes/user.routes.js";
 import v1CarRoutes from "./v1/routes/car.routes.js";
-import v1GarageRouter from "./v1/routes/garage.routes.js";
+import v1GarageRoutes from "./v1/routes/garage.routes.js";
+
+//Tests
+import v1PruebaRoutes from "./v1/routes/prueba.routes.js";
 
 const app = express();
 
@@ -27,7 +30,8 @@ app.use(cookieParser());
 app.use("/api/v1", v1AuthenticationRoutes);
 app.use("/api/v1", v1UserRoutes);
 app.use("/api/v1", v1CarRoutes);
-app.use("/api/v1", v1GarageRouter);
+app.use("/api/v1", v1GarageRoutes);
+app.use("/api/v1", v1PruebaRoutes);
 
 //Hello World!
 app.get("/helloworld", (req, res) => {

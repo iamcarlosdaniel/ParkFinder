@@ -2,6 +2,8 @@ import { garageService } from "../services/garage.service.js";
 
 const getAllGarages = async (req, res) => {
   try {
+    const allGarages = await garageService.getAllGarages();
+    res.status(200).send({ status: "OK", data: allGarages });
   } catch (error) {
     res
       .status(error?.status || 500)

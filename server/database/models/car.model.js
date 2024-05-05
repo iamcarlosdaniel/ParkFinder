@@ -47,7 +47,7 @@ const carSchema = new mongoose.Schema(
       type: dimensionsSchema,
       required: true,
     },
-    vin: {
+    number_plate: {
       type: String,
       required: true,
       trim: true,

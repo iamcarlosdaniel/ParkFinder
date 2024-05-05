@@ -36,6 +36,21 @@ const placeSchema = new mongoose.Schema(
   }
 );
 
+const periodSchema = new mongoose.Schema(
+  {
+    check_in: {
+      type: Date,
+      required: true,
+    },
+    check_out: {
+      type: Date,
+      required: true,
+    },
+  },
+  {
+    _id: false,
+  }
+);
 const scheduleSchema = new mongoose.Schema(
   {
     weekdays: {
@@ -51,14 +66,7 @@ const scheduleSchema = new mongoose.Schema(
       ],
       required: true,
     },
-    check_in: {
-      type: Date,
-      required: true,
-    },
-    check_out: {
-      type: Date,
-      required: true,
-    },
+    periods: [periodSchema],
   },
   {
     _id: false,
