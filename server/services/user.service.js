@@ -10,7 +10,17 @@ const getUser = async (userId) => {
   }
 };
 
-const updateUser = async (userId, userData) => {
+const getUserLogged = async (userId) => {
+  try {
+    const userFound = await User.findById(userId).select("-password");
+
+    return userFound;
+  } catch (error) {
+    throw new Error(error.message);
+  }
+};
+
+const updateUserLogged = async (userId, userData) => {
   try {
     const username = userData.username;
     const userFound = await User.findOne({ username });
@@ -43,5 +53,6 @@ const updateUser = async (userId, userData) => {
 
 export const userService = {
   getUser,
-  updateUser,
+  getUserLogged,
+  updateUserLogged,
 };

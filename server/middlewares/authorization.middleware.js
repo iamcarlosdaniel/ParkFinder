@@ -12,6 +12,7 @@ export const authorizationRequired = async (req, res, next) => {
         },
       });
     }
+    next();
   } catch (error) {
     res
       .status(error?.status || 500)

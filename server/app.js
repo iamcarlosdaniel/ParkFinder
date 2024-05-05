@@ -8,6 +8,9 @@ import v1UserRoutes from "./v1/routes/user.routes.js";
 import v1CarRoutes from "./v1/routes/car.routes.js";
 import v1GarageRoutes from "./v1/routes/garage.routes.js";
 
+import v1CustomerRoutes from "./v1/routes/customer.routes.js";
+import v1BidderRoutes from "./v1/routes/bidder.routes.js";
+
 //Tests
 import v1PruebaRoutes from "./v1/routes/prueba.routes.js";
 
@@ -32,6 +35,8 @@ app.use("/api/v1", v1UserRoutes);
 app.use("/api/v1", v1CarRoutes);
 app.use("/api/v1", v1GarageRoutes);
 app.use("/api/v1", v1PruebaRoutes);
+app.use("/api/v1", v1CustomerRoutes);
+app.use("/api/v1", v1BidderRoutes);
 
 //Hello World!
 app.get("/helloworld", (req, res) => {

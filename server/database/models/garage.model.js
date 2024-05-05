@@ -73,6 +73,24 @@ const scheduleSchema = new mongoose.Schema(
   }
 );
 
+const coordinatesSchema = new mongoose.Schema(
+  {
+    latitude: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    longitude: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+  },
+  {
+    _id: false,
+  }
+);
+
 const garageSchema = new mongoose.Schema(
   {
     user_id: {
@@ -90,12 +108,27 @@ const garageSchema = new mongoose.Schema(
       required: true,
       trim: true,
     },
+    coordinates: {
+      type: coordinatesSchema,
+      required: true,
+    },
     places: [placeSchema],
     schedule: [scheduleSchema],
+    rating: {
+      type: Number,
+    },
+    price_hour: {
+      type: Number,
+      required: true,
+    },
     state: {
       type: String,
       enum: ["available", "taken"],
       default: "available",
+    },
+    blocked_users: {
+      type: [String],
+      required: true,
     },
   },
   {

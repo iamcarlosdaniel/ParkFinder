@@ -11,6 +11,7 @@ const userSchema = new mongoose.Schema(
     role: {
       type: String,
       required: true,
+      enum: ["admin", "customer", "bidder"],
       trim: true,
     },
     first_name: {
@@ -58,6 +59,12 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
       trim: true,
+    },
+    customer_rating: {
+      type: Number,
+    },
+    bidder_rating: {
+      type: Number,
     },
   },
   {
