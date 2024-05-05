@@ -1,6 +1,6 @@
 import User from "../database/models/user.model.js";
 
-const getUser = async (userId) => {
+const getOneUser = async (userId) => {
   try {
     const userFound = await User.findById(userId).select("-password");
 
@@ -10,7 +10,7 @@ const getUser = async (userId) => {
   }
 };
 
-const getUserLogged = async (userId) => {
+const getMyUser = async (userId) => {
   try {
     const userFound = await User.findById(userId).select("-password");
 
@@ -20,7 +20,7 @@ const getUserLogged = async (userId) => {
   }
 };
 
-const updateUserLogged = async (userId, userData) => {
+const updateMyUser = async (userId, userData) => {
   try {
     const username = userData.username;
     const userFound = await User.findOne({ username });
@@ -52,7 +52,7 @@ const updateUserLogged = async (userId, userData) => {
 };
 
 export const userService = {
-  getUser,
-  getUserLogged,
-  updateUserLogged,
+  getOneUser,
+  getMyUser,
+  updateMyUser,
 };

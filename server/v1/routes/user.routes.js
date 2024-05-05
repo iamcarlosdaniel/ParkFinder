@@ -1,26 +1,23 @@
 import { Router } from "express";
 import { userController } from "../../controllers/user.controller.js";
 import { authenticationRequired } from "../../middlewares/authentication.middleware.js";
-import { authorizationRequired } from "../../middlewares/authorization.middleware.js";
 
 const router = Router();
 
-//View user information by id
 router.get(
-  "/auth/admin/users/:id",
+  "/auth/users/:id",
   authenticationRequired,
-  authorizationRequired,
-  userController.getUser
+  userController.getOneUser
 );
 
 //View user logged
-router.get("/auth/users", authenticationRequired, userController.getUserLogged);
+router.get("/auth/users/me", authenticationRequired, userController.getMyUser);
 
 //Update user information
 router.put(
-  "/auth/users",
+  "/auth/users/me",
   authenticationRequired,
-  userController.updateUserLogged
+  userController.updateMyUser
 );
 
 export default router;

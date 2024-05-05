@@ -38,11 +38,11 @@ const placeSchema = new mongoose.Schema(
 
 const periodSchema = new mongoose.Schema(
   {
-    check_in: {
+    from: {
       type: Date,
       required: true,
     },
-    check_out: {
+    to: {
       type: Date,
       required: true,
     },

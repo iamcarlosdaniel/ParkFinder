@@ -1,6 +1,6 @@
 import { userService } from "../services/user.service.js";
 
-const getUser = async (req, res) => {
+const getOneUser = async (req, res) => {
   try {
     const userFound = await userService.getUser(req.user.id);
     res.status(200).send({ status: "OK", data: userFound });
@@ -11,7 +11,7 @@ const getUser = async (req, res) => {
   }
 };
 
-const getUserLogged = async (req, res) => {
+const getMyUser = async (req, res) => {
   try {
     const userFound = await userService.getUser(req.user.id);
     res.status(200).send({ status: "OK", data: userFound });
@@ -22,7 +22,7 @@ const getUserLogged = async (req, res) => {
   }
 };
 
-const updateUserLogged = async (req, res) => {
+const updateMyUser = async (req, res) => {
   try {
     const updatedUser = await userService.updateUser(req.user.id, req.body);
     res.status(200).send({ status: "OK", data: updatedUser });
@@ -34,7 +34,7 @@ const updateUserLogged = async (req, res) => {
 };
 
 export const userController = {
-  getUser,
-  getUserLogged,
-  updateUserLogged,
+  getOneUser,
+  getMyUser,
+  updateMyUser,
 };

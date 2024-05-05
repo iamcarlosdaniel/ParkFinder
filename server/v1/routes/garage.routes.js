@@ -11,30 +11,37 @@ router.get(
   garageController.getAllGarages
 );
 
+//See all my garages
+router.get(
+  "/auth/users/garages",
+  authenticationRequired,
+  garageController.getAllGarages
+);
+
 //See a garage
 router.get(
-  "/auth/garages/:id",
+  "/auth/users/garages/:id",
   authenticationRequired,
   garageController.getOneGarage
 );
 
 //Create a garage
 router.post(
-  "/auth/garages",
+  "/auth/users/garages",
   authenticationRequired,
   garageController.createGarage
 );
 
 //Update a garage
 router.put(
-  "/auth/garages/:id",
+  "/auth/users/garages/:id",
   authenticationRequired,
   garageController.updateGarage
 );
 
 //Delete a garage
 router.delete(
-  "auth/garage/:id",
+  "auth/users/garage/:id",
   authenticationRequired,
   garageController.deleteGarage
 );
