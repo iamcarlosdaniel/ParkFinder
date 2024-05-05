@@ -9,6 +9,15 @@ const getAllCars = async () => {
   }
 };
 
+const getAllMyCars = async (userId) => {
+  try {
+    const allMyCars = await Car.find({ user: userId }).populate("user");
+    return allMyCars;
+  } catch (error) {
+    throw new Error(error.message);
+  }
+};
+
 const getOneCar = async (carId) => {
   try {
     const carFound = await Car.findById(carId);
@@ -60,6 +69,7 @@ const deleteCar = async (carId) => {
 };
 export const carService = {
   getAllCars,
+  getAllMyCars,
   getOneCar,
   createCar,
   updateCar,

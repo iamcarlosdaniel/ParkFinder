@@ -11,6 +11,17 @@ const getAllCars = async (req, res) => {
   }
 };
 
+const getAllMyCars = async (req, res) => {
+  try {
+    const allMyCars = await carService.getAllMyCars(req.user.id);
+    res.status(200).send({ status: "OK", data: allMyCars });
+  } catch (error) {
+    res
+      .status(error?.status || 500)
+      .send({ status: "FAILED", data: { error: error?.message || error } });
+  }
+};
+
 const getOneCar = async (req, res) => {
   try {
     const carFound = await carService.getOneCar(req.params.id);
@@ -57,6 +68,7 @@ const deleteCar = async (req, res) => {
 
 export const carController = {
   getAllCars,
+  getAllMyCars,
   getOneCar,
   createCar,
   updateCar,

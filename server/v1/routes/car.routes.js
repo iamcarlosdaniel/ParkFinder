@@ -7,14 +7,33 @@ const router = Router();
 //See all cars
 router.get("/auth/cars", authenticationRequired, carController.getAllCars);
 
+//See all my cars
+router.get(
+  "/auth/users/cars",
+  authenticationRequired,
+  carController.getAllMyCars
+);
+
 //See a car
-router.get("/auth/cars/:id", authenticationRequired, carController.getOneCar);
+router.get(
+  "/auth/users/cars/:id",
+  authenticationRequired,
+  carController.getOneCar
+);
 
 //Create a new car
-router.post("/auth/cars", authenticationRequired, carController.createCar);
+router.post(
+  "/auth/users/cars",
+  authenticationRequired,
+  carController.createCar
+);
 
 //Update a car
-router.put("/auth/cars/:id", authenticationRequired, carController.updateCar);
+router.put(
+  "/auth/users/cars/:id",
+  authenticationRequired,
+  carController.updateCar
+);
 
 //Delete a car
 router.delete(
