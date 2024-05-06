@@ -15,7 +15,7 @@ router.get(
 router.get(
   "/auth/users/garages",
   authenticationRequired,
-  garageController.getAllGarages
+  garageController.getAllMyGarages
 );
 
 //See a garage

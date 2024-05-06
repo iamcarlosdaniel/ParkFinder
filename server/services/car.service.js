@@ -38,7 +38,7 @@ const createCar = async (carData, userId) => {
       user_id: userId,
       ...carData,
     });
-    newCar.save();
+    await newCar.save();
     return newCar;
   } catch (error) {
     throw new Error(error.message);
@@ -47,7 +47,7 @@ const createCar = async (carData, userId) => {
 
 const updateCar = async (carId, carData) => {
   try {
-    const carUpdate = await Car.findByIdAndDelete({ _id: carId }, carData, {
+    const carUpdate = await Car.findByIdAndUpdate({ _id: carId }, carData, {
       new: true,
     });
     return carUpdate;
