@@ -2,7 +2,7 @@ import Garage from "../database/models/garage.model.js";
 
 const getAllGarages = async () => {
   try {
-    const allGarages = Garage.find();
+    const allGarages = await Garage.find();
     return allGarages;
   } catch (error) {
     throw new Error(error.message);
@@ -11,7 +11,9 @@ const getAllGarages = async () => {
 
 const getAllMyGarages = async (userId) => {
   try {
-    const allMyGarages = Garage.find({ user_id: userId }).populate("user_id");
+    const allMyGarages = await Garage.find({ user_id: userId }).populate(
+      "user_id"
+    );
     return allMyGarages;
   } catch (error) {
     throw new Error(error.message);

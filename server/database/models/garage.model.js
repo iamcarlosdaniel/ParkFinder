@@ -128,7 +128,6 @@ const garageSchema = new mongoose.Schema(
     },
     blocked_users: {
       type: [String],
-      required: true,
     },
   },
   {

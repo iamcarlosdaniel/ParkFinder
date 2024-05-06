@@ -11,9 +11,7 @@ const getAllBidders = async (req, res) => {
 
 const getTopBidder = async (req, res) => {
   try {
-    const topBidders = await topEntitiesService.getTopBidder(
-      req.params.topNumber
-    );
+    const topBidders = await bidderService.getTopBidder(req.params.topNumber);
     res.status(200).send({ status: "OK", data: topBidders });
   } catch (error) {
     res
@@ -24,7 +22,7 @@ const getTopBidder = async (req, res) => {
 
 const getWorstBidder = async (req, res) => {
   try {
-    const worstBidders = await worstEntitiesService.getWorstBidder(
+    const worstBidders = await bidderService.getWorstBidder(
       req.params.worstNumber
     );
     res.status(200).send({ status: "OK", data: worstBidders });

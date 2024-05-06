@@ -16,14 +16,14 @@ import v1PruebaRoutes from "./v1/routes/prueba.routes.js";
 
 const app = express();
 
-app.use(cors());
+//app.use(cors());
 
-// app.use(
-//   cors({
-//     origin: "//dominio",
-//     credentials: true,
-//   })
-// );
+app.use(
+  cors({
+    origin: "https://prueba1-1-ne8k.onrender.com/",
+    credentials: true,
+  })
+);
 
 app.use(morgan("dev"));
 app.use(express.json());

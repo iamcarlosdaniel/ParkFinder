@@ -20,7 +20,7 @@ const getTopBidder = async (topNumber) => {
           username: 1,
           country: 1,
           city: 1,
-          customer_rating: 1,
+          bidder_rating: 1,
         },
       },
     ]);
@@ -43,7 +43,7 @@ const getWorstBidder = async (worstNumber) => {
           username: 1,
           country: 1,
           city: 1,
-          customer_rating: 1,
+          bidder_rating: 1,
         },
       },
     ]);
