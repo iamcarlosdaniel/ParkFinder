@@ -1,4 +1,4 @@
-# ParkFind
+# ParkFinder
 
 ![](https://img.shields.io/badge/JavaScript-%20JS-%23F7DF1E?logo=javascript)
 ![https://nodejs.org/](https://img.shields.io/badge/Node-JS-%23339933?logo=nodedotjs)
@@ -74,23 +74,23 @@ ParkFinder would not be possible without you all. We appreciate your help!
 
 #### FrontEnd - Web
 
-📁[Repositorio en GitHub]()
+📁[Repositorio en GitHub](https://github.com/brunitaa/ParkFinderWEB)
 
-- Bruna Antelo Prado [@usergithub]()
+- Bruna Antelo Prado [@brunitaa](https://github.com/brunitaa)
 - Luis Enrique Padilla Arandia [@usergithub]()
 
 #### FrontEnd - Movil
 
-📁[Repositorio en GitHub]()
+📁[Repositorio en GitHub](https://github.com/lordvader991/ParkFinderMobile)
 
 - Telassim Tammy Valentina Lazaro Quispe [@usergithub]()
-- Jose Maria Zapata Paz [@usergithub]()
+- Jose Maria Zapata Paz [@lordvader991](https://github.com/lordvader991/)
 
 #### BackEnd
 
-📁[Repositorio en GitHub]()
+📁[Repositorio en GitHub](https://github.com/iamcarlosdaniel/ParkFinder)
 
-- Carlos Daniel Menchaca Arauz - [@iamcarlosdaniel]()
+- Carlos Daniel Menchaca Arauz - [@iamcarlosdaniel](https://github.com/iamcarlosdaniel)
 
 ## License
 
