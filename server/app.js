@@ -20,7 +20,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://prueba1-1-ne8k.onrender.com/",
+    origin: "https://prueba1-sxr0.onrender.com",
     credentials: true,
   })
 );
