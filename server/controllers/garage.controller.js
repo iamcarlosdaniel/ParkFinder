@@ -13,7 +13,7 @@ const getAllGarages = async (req, res) => {
 
 const getAllMyGarages = async (req, res) => {
   try {
-    const allGarages = await garageService.getAllGarages();
+    const allGarages = await garageService.getAllMyGarages();
     res.status(200).send({ status: "OK", data: allGarages });
   } catch (error) {
     res
